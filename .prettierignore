@@ -1,0 +1,5 @@
+**/*.html
+**/.git
+**/.svn
+**/.hg
+**/node_modulesnpm install --save-dev @trivago/prettier-plugin-sort-imports
