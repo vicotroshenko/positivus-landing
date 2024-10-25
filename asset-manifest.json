@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/positivus-landing/static/css/main.20f4d338.css",
+    "main.js": "/positivus-landing/static/js/main.e101e5e3.js",
+    "static/js/453.ab30e9ab.chunk.js": "/positivus-landing/static/js/453.ab30e9ab.chunk.js",
+    "index.html": "/positivus-landing/index.html",
+    "main.20f4d338.css.map": "/positivus-landing/static/css/main.20f4d338.css.map",
+    "main.e101e5e3.js.map": "/positivus-landing/static/js/main.e101e5e3.js.map",
+    "453.ab30e9ab.chunk.js.map": "/positivus-landing/static/js/453.ab30e9ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20f4d338.css",
+    "static/js/main.e101e5e3.js"
+  ]
+}
