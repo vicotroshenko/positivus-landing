@@ -1,0 +1,30 @@
+.studies_desktop {
+  display: none;
+  max-width: 1234px;
+  margin: 0 auto;
+  padding: 70px 60px;
+  background-color: var(--color-dark-2);
+  border-radius: var(--b-radius-2);
+  list-style-type: none;
+}
+
+.studies_desktop li:first-child {
+  padding-right: 64px;
+  border-right: 1px solid var(--color-white);
+}
+
+.studies_desktop li:nth-child(2) {
+  padding-right: 64px;
+  padding-left: 64px;
+}
+
+.studies_desktop li:last-child {
+  padding-left: 64px;
+  border-left: 1px solid var(--color-white);
+}
+
+@media screen and (min-width: 1440px) {
+  .studies_desktop {
+    display: flex;
+  }
+}

@@ -1,0 +1,17 @@
+.item_content {
+  color: var(--color-white);
+  background-color: var(--color-dark-2);
+}
+
+.item_content > p {
+  font-size: var(--text-size-sm);
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1440px) {
+  .item_content > p {
+    font-size: var(--text-size-sm2);
+    line-height: 1.533;
+  }
+}

@@ -1,0 +1,17 @@
+.mobile_list {
+  margin: 0 auto;
+}
+
+.mobile_list_item {
+  margin: 0 auto;
+  height: 100%;
+  padding: 42px 50px;
+  background-color: var(--color-dark-2);
+  border-radius: var(--b-radius-2);
+}
+
+@media screen and (min-width: 1440px) {
+  .mobile_list {
+    display: none;
+  }
+}
