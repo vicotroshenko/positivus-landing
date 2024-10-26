@@ -1,0 +1,15 @@
+.highlighter {
+	--highlighter-gap: 7px;
+	display: inline-block;
+	padding-left: var(--highlighter-gap);
+	padding-right: var(--highlighter-gap);
+	border-radius: var(--highlighter-gap);
+}
+
+.highlighter.GREEN {
+	background-color: var(--color-green);
+}
+
+.highlighter.WHITE {
+	background-color: var(--color-white);
+}

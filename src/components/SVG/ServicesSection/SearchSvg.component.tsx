@@ -3,8 +3,6 @@ import React from 'react';
 const SearchSvg = () => {
   return (
     <svg
-      width="210"
-      height="170"
       viewBox="0 0 210 170"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -12,8 +10,8 @@ const SearchSvg = () => {
     >
       <rect
         y="2"
-        width="210"
-        height="166.047"
+        width="100%"
+        height="100%"
         fill="url(#pattern0_336_1588)"
       />
       <defs>

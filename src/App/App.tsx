@@ -1,10 +1,11 @@
 import React from 'react';
 
-import CustomButton from '../components/CustomButton/CustomButton.component';
-import CustomLink from '../components/CustomLink/CustomLink.component';
+import ServiceSection from '../components/ServiceSection/ServiceSection.component';
 
 function App() {
-  return <main></main>;
+  return <main>
+    <ServiceSection/>
+  </main>;
 }
 
 export default App;

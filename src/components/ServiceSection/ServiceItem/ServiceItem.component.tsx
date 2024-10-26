@@ -1,0 +1,48 @@
+import clsx from 'clsx';
+import React from 'react';
+
+import CustomLink from '../../CustomLink/CustomLink.component';
+import Highlighter from '../../Highlighter/Highlighter.component';
+import styles from './ServiceItem.module.css';
+
+enum ServiceItemBg {
+  GREY = 'GREY',
+  DARK = 'DARK',
+  GREEN = 'GREEN',
+}
+
+interface ServiceItemProps {
+  title: string;
+  children: React.ReactNode;
+  item_bg?: keyof typeof ServiceItemBg;
+}
+
+const ServiceItem: React.FC<ServiceItemProps> = ({
+  children,
+  title,
+  item_bg = 'GREY',
+}) => {
+  console.log(title.split(' '));
+  return (
+    <li className={clsx(styles.item, styles[item_bg])}>
+      <h3>
+        <Highlighter>
+          {title.split(' ').slice(0, -1).join(' ')}
+        </Highlighter>
+        <Highlighter>
+          {title.split(' ').slice(-1).join(' ')}
+        </Highlighter>
+      </h3>
+      <div className={styles.link}>
+        <CustomLink
+          variants="LEFT_ARROW"
+          link="#"
+          left_arrow_dark={ServiceItemBg.DARK === item_bg}
+        />
+      </div>
+      <div className={styles.item_svg}>{children}</div>
+    </li>
+  );
+};
+
+export default ServiceItem;
