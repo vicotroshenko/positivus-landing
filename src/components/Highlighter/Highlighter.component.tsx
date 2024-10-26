@@ -12,12 +12,11 @@ interface HighlighterProps {
   fill?: keyof typeof HighlighterStyle;
 }
 
-const Highlighter: React.FC<HighlighterProps> = ({
-  children,
-  fill = null,
-}) => {
+const Highlighter: React.FC<HighlighterProps> = ({ children, fill = null }) => {
   return (
-    <mark className={clsx(styles.highlighter, fill ? styles[fill] : '')}>{children}</mark>
+    <mark className={clsx(styles.highlighter, fill ? styles[fill] : '')}>
+      {children}
+    </mark>
   );
 };
 

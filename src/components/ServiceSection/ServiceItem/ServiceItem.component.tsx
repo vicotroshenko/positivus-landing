@@ -26,12 +26,8 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
   return (
     <li className={clsx(styles.item, styles[item_bg])}>
       <h3>
-        <Highlighter>
-          {title.split(' ').slice(0, -1).join(' ')}
-        </Highlighter>
-        <Highlighter>
-          {title.split(' ').slice(-1).join(' ')}
-        </Highlighter>
+        <Highlighter>{title.split(' ').slice(0, -1).join(' ')}</Highlighter>
+        <Highlighter>{title.split(' ').slice(-1).join(' ')}</Highlighter>
       </h3>
       <div className={styles.link}>
         <CustomLink

@@ -1,11 +1,13 @@
 import React from 'react';
 
-import ServiceSection from '../components/ServiceSection/ServiceSection.component';
+import Proposal from '../components/Proposal/Proposal.component';
 
 function App() {
-  return <main>
-    <ServiceSection/>
-  </main>;
+  return (
+    <main>
+      <Proposal />
+    </main>
+  );
 }
 
 export default App;
