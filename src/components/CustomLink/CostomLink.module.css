@@ -1,0 +1,80 @@
+.link {
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--color-dark-1);
+  text-decoration: none;
+}
+
+.leftArrow {
+  position: relative;
+  display: block;
+  width: 41px;
+  height: 41px;
+  border-radius: var(--b-radius-round);
+  background-color: var(--color-dark-2);
+}
+
+.leftArrow::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  content: '';
+  background-color: var(--color-white);
+  -webkit-mask: url(../../assets/images/svg/arrow.svg) no-repeat 100% 100%;
+  mask: url(../../assets/images/svg/arrow.svg) no-repeat 100% 100%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.leftArrow.left_arrow_dark {
+  background-color: var(--color-white);
+}
+.left_arrow_dark.leftArrow::before {
+  background-color: var(--color-dark-2);
+}
+
+.rightArrow {
+  display: flex;
+  align-items: center;
+  color: var(--color-green);
+}
+
+.rightArrow::before {
+  content: attr(data-name);
+}
+
+.rightArrow::after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  left: 15px;
+  width: 28px;
+  height: 28px;
+  background-color: var(--color-green);
+  -webkit-mask: url(../../assets/images/svg/arrow.svg) no-repeat 100% 100%;
+  mask: url(../../assets/images/svg/arrow.svg) no-repeat 100% 100%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+@media screen and (min-width: 1440px) {
+  .leftArrow::after {
+    content: attr(data-name);
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 15px);
+    transform: translateY(-50%);
+    display: inline-block;
+    width: max-content;
+    color: var(--color-dark-1);
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .left_arrow_dark.leftArrow::after {
+    color: var(--color-white);
+  }
+}

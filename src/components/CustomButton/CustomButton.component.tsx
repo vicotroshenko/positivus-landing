@@ -34,7 +34,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
         [styles.secondary]: ButtonsStyle.SECONDARY === variant,
       })}
     >
-      CustomButton
+      {children}
     </button>
   );
 };
