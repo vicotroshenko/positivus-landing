@@ -1,0 +1,42 @@
+@import-normalize;
+@import url(../fonts/Space_Grotesk/stylesheet.css);
+@import url(./variables.css);
+
+body {
+  margin: 0;
+  background-color: var(--color-white);
+  font-family: 'Space Grotesk';
+  font-size: var(--text-size-base);
+  line-height: var(--line-height-normal);
+  font-weight: 400;
+  color: var(--color-dark-1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: 2px solid greenyellow;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

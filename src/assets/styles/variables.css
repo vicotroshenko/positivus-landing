@@ -1,0 +1,24 @@
+:root {
+  --color-dark-1: #000000;
+  --color-dark-2: #191a23;
+  --color-dark-3: #292a32;
+  --color-withe: #ffffff;
+  --color-green: #b9ff66;
+  --color-grey: #f3f3f3;
+  --text-size-xs: 14px;
+  --text-size-sm: 16px;
+  --text-size-sm2: 18px;
+  --text-size-base: 20px;
+  --text-size-lg: 26px;
+  --text-size-xl: 30px;
+  --text-size-2xl: 36px;
+  --text-size-3xl: 40px;
+  --text-size-4xl: 43px;
+  --text-size-5xl: 60px;
+  --line-height-base: 1;
+  --line-height-mobile: 1.5;
+  --line-height-normal: normal;
+  --b-radius: 14px;
+  --b-radius-2: 45px;
+  --b-radius-round: 100%;
+}
