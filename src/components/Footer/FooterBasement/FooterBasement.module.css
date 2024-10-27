@@ -1,0 +1,27 @@
+.f_basement {
+  color: var(--color-white);
+  font-size: var(--text-size-sm);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.f_basement > p:first-child {
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1440px) {
+  .f_basement {
+    display: flex;
+    color: var(--color-white);
+    font-size: var(--text-size-sm2);
+    line-height: 1.4;
+    text-align: left;
+    grid-column: 1/4;
+    width: 100%;
+  }
+
+  .f_basement > p:first-child {
+    margin-bottom: 0;
+    margin-right: 40px;
+  }
+}

@@ -1,11 +1,12 @@
 import React from 'react';
 
-import ContactUs from '../components/ContactUs/ContactUs.component';
+import Footer from '../components/Footer/Footer.component';
+import Logo from '../components/Logo/Logo.component';
 
 function App() {
   return (
     <main>
-      <ContactUs />
+      <Footer />
     </main>
   );
 }

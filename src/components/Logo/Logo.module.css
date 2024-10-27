@@ -1,0 +1,11 @@
+.logo {
+  fill: var(--color-dark-1);
+}
+
+.logo.dark {
+  fill: var(--color-white);
+}
+
+.logo_link {
+  text-decoration: none;
+}

@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React from 'react';
 
 import styles from './CustomField.module.css';
@@ -10,6 +11,7 @@ interface CustomFieldProps
   label?: string;
   errors?: { [x: string]: string };
   touched?: { [x: string]: boolean };
+  transparent?: boolean;
 }
 
 const CustomField: React.FC<CustomFieldProps> = ({
@@ -17,6 +19,7 @@ const CustomField: React.FC<CustomFieldProps> = ({
   label,
   errors,
   touched,
+  transparent,
   ...props
 }) => {
   return (
@@ -27,7 +30,9 @@ const CustomField: React.FC<CustomFieldProps> = ({
           {...props}
           name={name}
           id={name}
-          className={styles.field}
+          className={clsx(styles.field, {
+            [styles.transparent]: transparent,
+          })}
         />
         {errors?.[name] && touched?.[name] && (
           <p className={styles.error}>{errors?.[name]}</p>

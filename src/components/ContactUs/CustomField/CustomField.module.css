@@ -1,4 +1,5 @@
 .custom_field {
+  width: 100%;
   position: relative;
 }
 
@@ -14,8 +15,18 @@
   background-color: var(--color-white);
 }
 
+.field.transparent {
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  padding: 21px 25px;
+}
+
 .field::placeholder {
   color: var(--color-grey-placeholder);
+}
+
+.field.field.transparent::placeholder {
+  color: var(--color-white);
 }
 
 .custom_field > label {
@@ -39,7 +50,12 @@
   .custom_field > label {
     font-size: var(--text-size-sm);
   }
+
   .field {
     font-size: var(--text-size-sm2);
+  }
+
+  .field.transparent {
+    padding: 22px 35px;
   }
 }

@@ -1,0 +1,19 @@
+.media_icons {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.media_icons > li {
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (min-width: 1440px) {
+  .media_icons {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    justify-self: end;
+  }
+}
