@@ -1,12 +1,11 @@
 import React from 'react';
 
-import Proposal from '../components/Proposal/Proposal.component';
-import CaseStudies from '../components/CaseStudies/CaseStudies.component';
+import WorkingProcess from '../components/WorkingProcess/WorkingProcess.component';
 
 function App() {
   return (
     <main>
-      <CaseStudies />
+      <WorkingProcess />
     </main>
   );
 }
