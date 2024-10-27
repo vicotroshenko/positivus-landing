@@ -1,11 +1,11 @@
 import React from 'react';
 
-import WorkingProcess from '../components/WorkingProcess/WorkingProcess.component';
+import ContactUs from '../components/ContactUs/ContactUs.component';
 
 function App() {
   return (
     <main>
-      <WorkingProcess />
+      <ContactUs />
     </main>
   );
 }
