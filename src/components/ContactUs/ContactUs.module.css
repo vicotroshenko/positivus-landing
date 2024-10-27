@@ -1,0 +1,28 @@
+.decor_image {
+  display: none;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 556px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    width: 100%;
+    max-width: 1240px;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0 80px 100px;
+    background-color: var(--color-grey);
+    border-radius: var(--b-radius-2);
+    overflow: hidden;
+  }
+
+  .decor_image {
+    position: relative;
+    left: 29%;
+    display: block;
+  }
+}
