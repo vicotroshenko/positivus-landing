@@ -6,7 +6,7 @@ import styles from './Proposal.module.css';
 
 const Proposal = () => {
   return (
-    <section>
+    <section className={styles.section}>
       <div>
         <div className={styles.proposal_container}>
           <div className={styles.main_content}>

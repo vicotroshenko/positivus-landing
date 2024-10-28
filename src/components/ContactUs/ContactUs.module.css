@@ -8,6 +8,12 @@
   margin: 0 auto;
 }
 
+.subtitle {
+  display: block;
+  margin: 0 auto;
+  max-width: 390px;
+}
+
 @media screen and (min-width: 1440px) {
   .wrapper {
     width: 100%;
@@ -24,5 +30,9 @@
     position: relative;
     left: 29%;
     display: block;
+  }
+
+  .subtitle {
+    max-width: 323px;
   }
 }

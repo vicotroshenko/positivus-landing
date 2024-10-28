@@ -1,0 +1,10 @@
+.subtitle {
+  display: inline-block;
+  max-width: 390px;
+}
+
+@media screen and (min-width: 1440px) {
+  .subtitle {
+    max-width: 580px;
+  }
+}

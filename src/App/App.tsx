@@ -1,11 +1,20 @@
 import React from 'react';
 
-import Footer from '../components/Footer/Footer.component';
-import Logo from '../components/Logo/Logo.component';
+import {
+  CaseStudies,
+  ContactUs,
+  Footer,
+  ServiceSection,
+  WorkingProcess,
+} from '../components';
 
 function App() {
   return (
     <main>
+      <ServiceSection />
+      <CaseStudies />
+      <WorkingProcess />
+      <ContactUs />
       <Footer />
     </main>
   );

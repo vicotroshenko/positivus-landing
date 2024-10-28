@@ -1,3 +1,10 @@
+.section {
+  width: 100%;
+  height: auto;
+  padding-top: calc(47px / 2);
+  padding-bottom: calc(47px / 2);
+}
+
 .proposal_container {
   display: flex;
   min-width: 390px;

@@ -5,10 +5,10 @@ import CustomLink from '../../CustomLink/CustomLink.component';
 import Highlighter from '../../Highlighter/Highlighter.component';
 import styles from './ServiceItem.module.css';
 
-enum ServiceItemBg {
+export enum ServiceItemBg {
   GREY = 'GREY',
-  DARK = 'DARK',
   GREEN = 'GREEN',
+  DARK = 'DARK',
 }
 
 interface ServiceItemProps {
@@ -22,7 +22,6 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
   title,
   item_bg = 'GREY',
 }) => {
-  console.log(title.split(' '));
   return (
     <li className={clsx(styles.item, styles[item_bg])}>
       <h3>

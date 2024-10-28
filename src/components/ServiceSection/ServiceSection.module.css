@@ -1,0 +1,26 @@
+.items_list {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  row-gap: 30px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 70px;
+}
+
+.subtitle {
+  display: inline-block;
+  max-width: 390px;
+}
+
+@media screen and (min-width: 1440px) {
+  .items_list {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 100px;
+  }
+
+  .subtitle {
+    max-width: 580px;
+  }
+}

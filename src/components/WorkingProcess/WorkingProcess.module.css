@@ -1,0 +1,22 @@
+.content_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subtitle {
+  display: block;
+  margin: 0 auto;
+  max-width: 390px;
+}
+
+@media screen and (min-width: 1440px) {
+  .content_wrapper {
+    gap: 30px;
+  }
+
+  .subtitle {
+    max-width: 292px;
+  }
+}
