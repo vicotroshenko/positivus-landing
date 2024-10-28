@@ -50,5 +50,6 @@
     flex-direction: row;
     gap: 40px;
     text-align: left;
+    align-items: center;
   }
 }

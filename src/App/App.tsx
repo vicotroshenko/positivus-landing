@@ -4,6 +4,7 @@ import {
   CaseStudies,
   ContactUs,
   Footer,
+  Header,
   ServiceSection,
   WorkingProcess,
 } from '../components';
@@ -11,6 +12,7 @@ import {
 function App() {
   return (
     <main>
+      <Header />
       <ServiceSection />
       <CaseStudies />
       <WorkingProcess />
