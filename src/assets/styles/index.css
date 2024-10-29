@@ -21,7 +21,6 @@ body {
 *::before,
 *::after {
   box-sizing: border-box;
-  outline: 2px solid greenyellow;
 }
 
 h1,

@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 60px;
 }
 
 .container {
@@ -54,7 +53,6 @@
 @media screen and (min-width: 1440px) {
   .hero {
     padding: 0;
-    margin-bottom: 140px;
   }
 
   .content_wrapper {
