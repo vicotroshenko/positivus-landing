@@ -17,24 +17,24 @@ interface CustomLinkProps
 
 const CustomLink: React.FC<CustomLinkProps> = ({
   link,
-  children,
   variants = null,
   left_arrow_dark = false,
   ...props
 }) => {
   return (
-    <a
-      href={link}
-      {...props}
-      data-name="Learn more"
-      className={clsx(styles.link, {
-        [styles.leftArrow]: LinkStyles.LEFT_ARROW === variants,
-        [styles.rightArrow]: LinkStyles.RIGHT_ARROW === variants,
-        [styles.left_arrow_dark]: left_arrow_dark,
-      })}
-    >
-      {children}
-    </a>
+    <div className={styles.link_wrapper}>
+      <a
+        href={link}
+        {...props}
+        aria-label="Learn more"
+        data-name="Learn more"
+        className={clsx(styles.link, {
+          [styles.leftArrow]: LinkStyles.LEFT_ARROW === variants,
+          [styles.rightArrow]: LinkStyles.RIGHT_ARROW === variants,
+          [styles.left_arrow_dark]: left_arrow_dark,
+        })}
+      ></a>
+    </div>
   );
 };
 

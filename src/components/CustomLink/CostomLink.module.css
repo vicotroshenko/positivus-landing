@@ -32,6 +32,7 @@
 .leftArrow.left_arrow_dark {
   background-color: var(--color-white);
 }
+
 .left_arrow_dark.leftArrow::before {
   background-color: var(--color-dark-2);
 }
@@ -58,6 +59,36 @@
   mask: url(../../assets/images/svg/arrow.svg) no-repeat 100% 100%;
   -webkit-mask-size: cover;
   mask-size: cover;
+}
+
+.link_wrapper {
+  display: inline-block;
+  width: 200px;
+  border-radius: var(--b-radius);
+  padding: 5px;
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+  background-size: 400% 400%;
+  background-repeat: no-repeat;
+  background-position: 200%;
+  transition: all 0.3s linear;
+}
+
+.link_wrapper:hover,
+.link_wrapper:focus {
+  background-position: 0;
+  transform: scale(1.05);
+}
+
+@meidia screen and (hover: none) {
+  .link_wrapper:active {
+    background-position: 0;
+    transform: scale(1.05);
+  }
 }
 
 @media screen and (min-width: 1440px) {

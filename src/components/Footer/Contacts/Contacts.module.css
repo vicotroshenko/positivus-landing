@@ -23,6 +23,17 @@
   font-size: var(--text-size-sm);
 }
 
+.contacts_list a:hover,
+.contacts_list a:focus {
+  text-decoration: underline;
+}
+
+@media screen and (hover: none) {
+  .contacts_list a:active {
+    text-decoration: underline;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .contacts > h4 {
     margin-bottom: 27px;

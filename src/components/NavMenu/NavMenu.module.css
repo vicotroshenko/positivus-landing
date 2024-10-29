@@ -20,7 +20,42 @@
 }
 
 .item {
-  height: 100%;
+  position: relative;
+  isolation: isolate;
+}
+
+.item a::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 0;
+  height: 120%;
+  border-radius: var(--b-radius);
+  background-color: var(--color-green);
+  transition: width 0.3s linear;
+  z-index: -1;
+}
+
+.item a:hover::before,
+.item a:focus::before {
+  width: 120%;
+}
+
+.nav.dark a:hover,
+.nav.dark a:focus {
+  color: var(--color-dark-1);
+}
+
+@media screen and (hover: none) {
+  .item a:active::before {
+    width: 120%;
+  }
+
+  .nav.dark a:active {
+    color: var(--color-dark-1);
+  }
 }
 
 .item > a {

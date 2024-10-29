@@ -1,12 +1,19 @@
-container {
-}
-
 .radioButton {
   position: absolute;
   visibility: none;
   opacity: 0;
   width: 0;
   height: 0;
+}
+
+.container {
+  transition: all 0.3s linear;
+}
+
+.container:hover,
+.container:focus {
+  font-weight: 500;
+  text-decoration: underline;
 }
 
 .label {
