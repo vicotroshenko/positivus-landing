@@ -48,6 +48,10 @@
   color: var(--color-dark-1);
 }
 
+.item.active a::before {
+  width: 120%;
+}
+
 @media screen and (hover: none) {
   .item a:active::before {
     width: 120%;

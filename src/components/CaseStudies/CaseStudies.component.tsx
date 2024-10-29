@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import { anchors } from '../../constants';
 import Container from '../Container/Container.component';
@@ -8,19 +8,28 @@ import CaseStudiesDesktop from './CaseStudiesDesktop/CaseStudiesDesktop.componen
 import CaseStudiesMobile from './CaseStudiesMobile/CaseStudiesMobile.component';
 import data from './data';
 
-const CaseStudies = () => {
-  return (
-    <Container anchor={anchors.CASES}>
-      <TitleContainer title="Case Studies">
-        <span className={styles.subtitle}>
-          Explore Real-Life Examples of Our Proven Digital Marketing Success
-          through Our Case Studies
-        </span>
-      </TitleContainer>
-      <CaseStudiesMobile data={data} />
-      <CaseStudiesDesktop data={data} />
-    </Container>
-  );
-};
+interface CaseStudiesProps {
+  isInView?: boolean;
+}
+const CaseStudies = forwardRef<HTMLElement, CaseStudiesProps>(
+  ({ isInView }, ref) => {
+    return (
+      <Container
+        anchor={anchors.CASES}
+        ref={ref}
+        isInView={isInView}
+      >
+        <TitleContainer title="Case Studies">
+          <span className={styles.subtitle}>
+            Explore Real-Life Examples of Our Proven Digital Marketing Success
+            through Our Case Studies
+          </span>
+        </TitleContainer>
+        <CaseStudiesMobile data={data} />
+        <CaseStudiesDesktop data={data} />
+      </Container>
+    );
+  }
+);
 
 export default CaseStudies;

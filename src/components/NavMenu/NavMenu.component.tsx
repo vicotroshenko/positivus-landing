@@ -9,13 +9,18 @@ const navItems = [
   { name: 'Services', anchor: anchors.SERVICES },
   { name: 'Use Cases', anchor: anchors.CASES },
   { name: 'Pricing', anchor: anchors.PRICING },
-  { name: 'Blog', anchor: anchors.BLOG },
 ];
 
 interface NavMenuProps {
   darkMode?: boolean;
+  toggle?: () => void;
+  visibleElements?: { [x: string]: boolean };
 }
-const NavMenu: React.FC<NavMenuProps> = ({ darkMode = false }) => {
+const NavMenu: React.FC<NavMenuProps> = ({
+  darkMode = false,
+  toggle,
+  visibleElements,
+}) => {
   return (
     <nav
       className={clsx(styles.nav, {
@@ -23,10 +28,13 @@ const NavMenu: React.FC<NavMenuProps> = ({ darkMode = false }) => {
       })}
     >
       <ul className={styles.list}>
-        {navItems.map(({ name, anchor }) => (
+        {navItems.map(({ name, anchor }, index) => (
           <li
             key={anchor}
-            className={styles.item}
+            className={clsx(styles.item, {
+              [styles.active]: Object.values(visibleElements ?? {})[index],
+            })}
+            onClick={toggle}
           >
             <a href={`#${anchor}`}>{name}</a>
           </li>

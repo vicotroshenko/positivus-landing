@@ -10,9 +10,12 @@ import MobileMenu from '../MobileMenu/MobileMenu.component';
 import NavMenu from '../NavMenu/NavMenu.component';
 import styles from './Header.module.css';
 
-const Header = () => {
+interface HeaderProps {
+  visibleElements?: { [x: string]: boolean };
+}
+
+const Header: React.FC<HeaderProps> = ({ visibleElements }) => {
   const [visible, setVisible] = useState<boolean>(false);
-  console.log('visible: ', visible);
 
   const toggle = () => setVisible((prev) => !prev);
   return (
@@ -29,7 +32,7 @@ const Header = () => {
         <div className={styles.container}>
           <Logo />
           <div className={styles.navMenu_wrapper}>
-            <NavMenu />
+            <NavMenu visibleElements={visibleElements} />
             <div className={styles.button_wrapper}>
               <CustomButton
                 variant="OUTLINED"

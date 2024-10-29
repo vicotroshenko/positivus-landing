@@ -4,6 +4,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: translateY(40px);
+  opacity: 0.5;
+  transition:
+    transform 0.3s linear,
+    opacity 0.3s linear;
+}
+
+.section.inView {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .container {

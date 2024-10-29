@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import { anchors } from '../../constants';
 import CustomButton from '../CustomButton/CustomButton.component';
@@ -6,11 +6,16 @@ import HeroSvg from '../SVG/Hero/HeroSvg.component';
 import styles from './Hero.module.css';
 import Platforms from './Platforms/Platforms.component';
 
-const Hero = () => {
+interface HeroProps {
+  isInView?: boolean;
+}
+
+const Hero = forwardRef<HTMLElement, HeroProps>(({ isInView }, ref) => {
   return (
     <section
       className={styles.hero}
       id={anchors.ABOUT}
+      ref={ref}
     >
       <div className={styles.container}>
         <div className={styles.content_wrapper}>
@@ -32,6 +37,6 @@ const Hero = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Hero;

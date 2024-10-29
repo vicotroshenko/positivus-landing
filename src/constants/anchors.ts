@@ -3,7 +3,6 @@ enum Anchors {
   SERVICES = 'services',
   CASES = 'cases',
   PRICING = 'pricing',
-  BLOG = 'blog',
   CONTACT = 'contact',
 }
 

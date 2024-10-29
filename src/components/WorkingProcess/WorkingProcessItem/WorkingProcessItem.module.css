@@ -10,6 +10,11 @@
   list-style-type: none;
   font-size: var(--text-size-sm);
   line-height: 1.4;
+  transition: background-color 0.3s linear;
+}
+
+.accordion.bg_active {
+  background-color: var(--color-green);
 }
 
 .accordion::after {

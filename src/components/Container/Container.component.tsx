@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import styles from './Container.module.css';
 
@@ -7,27 +7,29 @@ interface ContainerProps {
   children: React.ReactNode;
   last?: boolean;
   anchor?: string;
+  isInView?: boolean;
 }
 
-const Container: React.FC<ContainerProps> = ({
-  children,
-  last = false,
-  anchor = '',
-}) => {
-  return (
-    <section
-      className={styles.section}
-      id={anchor}
-    >
-      <div
-        className={clsx(styles.container, {
-          [styles.last]: last,
+const Container = forwardRef<HTMLElement, ContainerProps>(
+  ({ children, last = false, anchor = '', isInView }, ref) => {
+    return (
+      <section
+        className={clsx(styles.section, {
+          [styles.inView]: isInView,
         })}
+        id={anchor}
+        ref={ref}
       >
-        {children}
-      </div>
-    </section>
-  );
-};
+        <div
+          className={clsx(styles.container, {
+            [styles.last]: last,
+          })}
+        >
+          {children}
+        </div>
+      </section>
+    );
+  }
+);
 
 export default Container;

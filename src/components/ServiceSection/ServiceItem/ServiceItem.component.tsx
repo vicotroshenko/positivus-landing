@@ -22,11 +22,17 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
   title,
   item_bg = 'GREY',
 }) => {
+  const markerColor = item_bg === ServiceItemBg.GREY ? 'GREEN' : 'WHITE';
   return (
     <li className={clsx(styles.item, styles[item_bg])}>
       <h3>
-        <Highlighter>{title.split(' ').slice(0, -1).join(' ')}</Highlighter>
-        <Highlighter>{title.split(' ').slice(-1).join(' ')}</Highlighter>
+        <Highlighter fill={markerColor}>
+          {title.split(' ').slice(0, -1).join(' ')}
+        </Highlighter>
+        <br />
+        <Highlighter fill={markerColor}>
+          {title.split(' ').slice(-1).join(' ')}
+        </Highlighter>
       </h3>
       <div className={styles.link}>
         <CustomLink

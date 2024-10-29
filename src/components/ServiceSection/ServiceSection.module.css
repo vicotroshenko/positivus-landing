@@ -8,6 +8,29 @@
   margin-bottom: 70px;
 }
 
+.items_list li:nth-child(odd) {
+  transform: translateX(-100%);
+  transition: all 0.3s linear;
+}
+
+.items_list li:nth-child(even) {
+  transform: translateX(100%);
+  transition: all 0.3s linear;
+}
+
+.items_list.inView li:nth-child(3),
+.items_list.inView li:nth-child(4) {
+  transition-delay: 0.3s;
+}
+.items_list.inView li:nth-child(5),
+.items_list.inView li:nth-child(6) {
+  transition-delay: 0.3s;
+}
+
+.items_list.inView li {
+  transform: translateX(0);
+}
+
 .subtitle {
   display: inline-block;
   max-width: 390px;

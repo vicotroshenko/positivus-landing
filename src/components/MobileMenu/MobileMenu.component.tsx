@@ -43,7 +43,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ visible, toggle }) => {
                 <CloseButtonIcon />
               </button>
               <Logo />
-              <NavMenu />
+              <NavMenu toggle={toggle} />
               <CustomButton
                 variant="OUTLINED"
                 onClick={() => scrollToElement(anchors.CONTACT)}
