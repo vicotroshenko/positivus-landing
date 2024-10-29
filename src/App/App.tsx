@@ -8,17 +8,21 @@ import {
   ServiceSection,
   WorkingProcess,
 } from '../components';
+import Hero from '../components/Hero/Hero.component';
 
 function App() {
   return (
-    <main>
+    <>
       <Header />
-      <ServiceSection />
-      <CaseStudies />
-      <WorkingProcess />
-      <ContactUs />
+      <main>
+        <Hero />
+        <ServiceSection />
+        <CaseStudies />
+        <WorkingProcess />
+        <ContactUs />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
 

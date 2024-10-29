@@ -1,0 +1,27 @@
+.platforms_list {
+  position: absolute;
+  top: 0;
+  left: 1240px;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1240px;
+  filter: grayscale(100%) brightness(70%) contrast(2);
+  animation: animate_platforms 30s infinite linear;
+}
+
+.delay_1.platforms_list {
+  animation-delay: -15s;
+}
+
+@keyframes animate_platforms {
+  from {
+    left: 1240px;
+  }
+
+  to {
+    left: -1240px;
+  }
+}
