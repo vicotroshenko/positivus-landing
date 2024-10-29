@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { memo } from 'react';
 
 import { ReactComponent as LogoIcon } from '../../assets/images/svg/Logo.svg';
 import styles from './Logo.module.css';
@@ -7,11 +7,11 @@ import styles from './Logo.module.css';
 interface LogoProps {
   darkMode?: true;
 }
-const Logo: React.FC<LogoProps> = ({ darkMode = false }) => {
+const Logo: React.FC<LogoProps> = memo(({ darkMode = false }) => {
   return (
     <div>
       <a
-        href="/"
+        href="https://vicotroshenko.github.io/positivus-landing/"
         className={styles.logo_link}
       >
         <LogoIcon
@@ -22,6 +22,6 @@ const Logo: React.FC<LogoProps> = ({ darkMode = false }) => {
       </a>
     </div>
   );
-};
+});
 
 export default Logo;

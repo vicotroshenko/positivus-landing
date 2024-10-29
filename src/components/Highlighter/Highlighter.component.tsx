@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { memo } from 'react';
 
 import styles from './Highlighter.module.css';
 
@@ -12,12 +12,14 @@ interface HighlighterProps {
   fill?: keyof typeof HighlighterStyle;
 }
 
-const Highlighter: React.FC<HighlighterProps> = ({ children, fill = null }) => {
-  return (
-    <mark className={clsx(styles.highlighter, fill ? styles[fill] : '')}>
-      {children}
-    </mark>
-  );
-};
+const Highlighter: React.FC<HighlighterProps> = memo(
+  ({ children, fill = null }) => {
+    return (
+      <mark className={clsx(styles.highlighter, fill ? styles[fill] : '')}>
+        {children}
+      </mark>
+    );
+  }
+);
 
 export default Highlighter;

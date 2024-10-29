@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 // Import Swiper styles
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,7 +14,7 @@ interface CaseStudiesMobileProps {
   }[];
 }
 
-const CaseStudiesMobile: React.FC<CaseStudiesMobileProps> = ({ data }) => {
+const CaseStudiesMobile: React.FC<CaseStudiesMobileProps> = memo(({ data }) => {
   return (
     <div>
       <Swiper
@@ -35,6 +35,6 @@ const CaseStudiesMobile: React.FC<CaseStudiesMobileProps> = ({ data }) => {
       </Swiper>
     </div>
   );
-};
+});
 
 export default CaseStudiesMobile;

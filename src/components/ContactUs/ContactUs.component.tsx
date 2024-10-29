@@ -6,6 +6,7 @@ import ContactUsSVG from '../SVG/ContactUs/ContactUsSVG/ContactUsSVG.component';
 import TitleContainer from '../TitleContainer/TitleContainer.component';
 import styles from './ContactUs.module.css';
 import Form from './Form/Form.component';
+import data from './data';
 
 interface ContactUsProps {
   isInView?: boolean;
@@ -19,10 +20,8 @@ const ContactUs = forwardRef<HTMLElement, ContactUsProps>(
         ref={ref}
         isInView={isInView}
       >
-        <TitleContainer title="Contact Us">
-          <span className={styles.subtitle}>
-            Connect with Us: Let's Discuss Your Digital Marketing Needs
-          </span>
+        <TitleContainer title={data.mainTitle}>
+          <span className={styles.subtitle}>{data.subtitle}</span>
         </TitleContainer>
         <div className={styles.wrapper}>
           <Form />

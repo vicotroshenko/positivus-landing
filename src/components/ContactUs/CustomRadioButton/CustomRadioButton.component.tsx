@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import styles from './CustomRadioButton.module.css';
 
@@ -12,30 +12,27 @@ interface CustomCheckboxProps
   id: string;
 }
 
-const CustomCheckbox: React.FC<CustomCheckboxProps> = ({
-  label,
-  name,
-  id,
-  ...props
-}) => {
-  return (
-    <div className={styles.container}>
-      <label
-        htmlFor={id}
-        className={styles.label}
-      >
-        <input
-          type="radio"
-          id={id}
-          name={name}
-          {...props}
-          className={styles.radioButton}
-        />
-        <span className={styles.custom_radioButton}></span>
-        {label}
-      </label>
-    </div>
-  );
-};
+const CustomCheckbox: React.FC<CustomCheckboxProps> = memo(
+  ({ label, name, id, ...props }) => {
+    return (
+      <div className={styles.container}>
+        <label
+          htmlFor={id}
+          className={styles.label}
+        >
+          <input
+            type="radio"
+            id={id}
+            name={name}
+            {...props}
+            className={styles.radioButton}
+          />
+          <span className={styles.custom_radioButton}></span>
+          {label}
+        </label>
+      </div>
+    );
+  }
+);
 
 export default CustomCheckbox;

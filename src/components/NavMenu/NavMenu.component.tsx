@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { memo } from 'react';
 
 import { anchors } from '../../constants';
 import styles from './NavMenu.module.css';
@@ -16,32 +16,30 @@ interface NavMenuProps {
   toggle?: () => void;
   visibleElements?: { [x: string]: boolean };
 }
-const NavMenu: React.FC<NavMenuProps> = ({
-  darkMode = false,
-  toggle,
-  visibleElements,
-}) => {
-  return (
-    <nav
-      className={clsx(styles.nav, {
-        [styles.dark]: darkMode,
-      })}
-    >
-      <ul className={styles.list}>
-        {navItems.map(({ name, anchor }, index) => (
-          <li
-            key={anchor}
-            className={clsx(styles.item, {
-              [styles.active]: Object.values(visibleElements ?? {})[index],
-            })}
-            onClick={toggle}
-          >
-            <a href={`#${anchor}`}>{name}</a>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
-};
+const NavMenu: React.FC<NavMenuProps> = memo(
+  ({ darkMode = false, toggle, visibleElements }) => {
+    return (
+      <nav
+        className={clsx(styles.nav, {
+          [styles.dark]: darkMode,
+        })}
+      >
+        <ul className={styles.list}>
+          {navItems.map(({ name, anchor }, index) => (
+            <li
+              key={anchor}
+              className={clsx(styles.item, {
+                [styles.active]: Object.values(visibleElements ?? {})[index],
+              })}
+              onClick={toggle}
+            >
+              <a href={`#${anchor}`}>{name}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    );
+  }
+);
 
 export default NavMenu;

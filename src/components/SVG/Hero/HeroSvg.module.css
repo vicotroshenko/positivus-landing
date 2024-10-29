@@ -1,0 +1,29 @@
+.animate_microphone {
+  transform-origin: center;
+  animation: animate1 7s linear infinite;
+}
+
+.animate_lines {
+  transform-origin: center;
+  animation: animate2 7s linear infinite;
+}
+
+@keyframes animate1 {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes animate2 {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+}

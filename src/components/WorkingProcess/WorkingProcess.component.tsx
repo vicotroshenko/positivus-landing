@@ -12,9 +12,12 @@ interface WorkingProcessProps {
 }
 const WorkingProcess = forwardRef<HTMLElement, WorkingProcessProps>(
   ({ isInView }, ref) => {
-    const [activeIndex, setActiveIndex] = useState<number>();
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-    const toggle = (index: number | undefined) => {
+    const toggle = (index: number | null) => {
+      if (index === activeIndex) {
+        return setActiveIndex(null);
+      }
       setActiveIndex(index);
     };
     return (
@@ -23,13 +26,11 @@ const WorkingProcess = forwardRef<HTMLElement, WorkingProcessProps>(
         ref={ref}
         isInView={isInView}
       >
-        <TitleContainer title="Our Working Process ">
-          <span className={styles.subtitle}>
-            Step-by-Step Guide to Achieving Your Business Goals
-          </span>
+        <TitleContainer title={data.mainTitle}>
+          <span className={styles.subtitle}>{data.subtitle}</span>
         </TitleContainer>
         <div className={styles.content_wrapper}>
-          {data.map((item, index) => (
+          {data.cards.map((item, index) => (
             <WorkingProcessItem
               title={item.title}
               text={item.text}

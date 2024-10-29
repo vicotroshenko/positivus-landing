@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { memo } from 'react';
 
 import styles from './CustomField.module.css';
 
@@ -14,32 +14,27 @@ interface CustomFieldProps
   transparent?: boolean;
 }
 
-const CustomField: React.FC<CustomFieldProps> = ({
-  name = '',
-  label,
-  errors,
-  touched,
-  transparent,
-  ...props
-}) => {
-  return (
-    <>
-      <div className={styles.custom_field}>
-        <label htmlFor={name}>{label}</label>
-        <input
-          {...props}
-          name={name}
-          id={name}
-          className={clsx(styles.field, {
-            [styles.transparent]: transparent,
-          })}
-        />
-        {errors?.[name] && touched?.[name] && (
-          <p className={styles.error}>{errors?.[name]}</p>
-        )}
-      </div>
-    </>
-  );
-};
+const CustomField: React.FC<CustomFieldProps> = memo(
+  ({ name = '', label, errors, touched, transparent, ...props }) => {
+    return (
+      <>
+        <div className={styles.custom_field}>
+          <label htmlFor={name}>{label}</label>
+          <input
+            {...props}
+            name={name}
+            id={name}
+            className={clsx(styles.field, {
+              [styles.transparent]: transparent,
+            })}
+          />
+          {errors?.[name] && touched?.[name] && (
+            <p className={styles.error}>{errors?.[name]}</p>
+          )}
+        </div>
+      </>
+    );
+  }
+);
 
 export default CustomField;

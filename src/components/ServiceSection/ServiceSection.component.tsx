@@ -21,7 +21,7 @@ const ServiceSection = forwardRef<HTMLElement, ServiceSectionProps>(
       const colors = Object.keys(ServiceItemBg);
       let order: number = 0;
       const step = 3;
-      return data.map((item) => {
+      return data.cards.map((item) => {
         if (order + step > 5) order = 0;
         const newItem = { ...item, item_bg: colors[order] };
         order++;
@@ -35,11 +35,8 @@ const ServiceSection = forwardRef<HTMLElement, ServiceSectionProps>(
         ref={ref}
         isInView={isInView}
       >
-        <TitleContainer title="Services">
-          <span className={styles.subtitle}>
-            At our digital marketing agency, we offer a range of services to
-            help businesses grow and succeed online. These services include:
-          </span>
+        <TitleContainer title={data.mainTitle}>
+          <span className={styles.subtitle}>{data.subtitle}</span>
         </TitleContainer>
         <ul
           className={clsx(styles.items_list, {

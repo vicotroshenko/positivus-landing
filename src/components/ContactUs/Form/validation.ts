@@ -6,10 +6,7 @@ export enum ErrorMessage {
   email = 'email must be a valid email',
 }
 const validationSchema = object({
-  name: string()
-    .trim()
-    .min(2, ErrorMessage.min_length)
-    .required(ErrorMessage.required),
+  name: string().trim().min(2, ErrorMessage.min_length),
   email: string()
     .trim()
     .email(ErrorMessage.email)

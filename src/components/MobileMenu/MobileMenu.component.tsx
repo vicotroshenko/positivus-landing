@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { useEffect } from 'react';
+import React, { memo, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
 import { ReactComponent as CloseButtonIcon } from '../../assets/images/svg/cross.svg';
@@ -15,7 +15,7 @@ interface MobileMenuProps {
   visible: boolean;
   toggle: () => void;
 }
-const MobileMenu: React.FC<MobileMenuProps> = ({ visible, toggle }) => {
+const MobileMenu: React.FC<MobileMenuProps> = memo(({ visible, toggle }) => {
   useEffect(() => {
     if (visible) {
       document.body.style.overflowY = 'hidden';
@@ -56,6 +56,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ visible, toggle }) => {
         modalRoot
       )
     : null;
-};
+});
 
 export default MobileMenu;

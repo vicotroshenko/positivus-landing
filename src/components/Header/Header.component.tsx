@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 
 import { ReactComponent as BurgerIcon } from '../../assets/images/svg/burger_menu.svg';
 import { anchors } from '../../constants';
@@ -14,7 +14,7 @@ interface HeaderProps {
   visibleElements?: { [x: string]: boolean };
 }
 
-const Header: React.FC<HeaderProps> = ({ visibleElements }) => {
+const Header: React.FC<HeaderProps> = memo(({ visibleElements }) => {
   const [visible, setVisible] = useState<boolean>(false);
 
   const toggle = () => setVisible((prev) => !prev);
@@ -55,6 +55,6 @@ const Header: React.FC<HeaderProps> = ({ visibleElements }) => {
       </header>
     </>
   );
-};
+});
 
 export default Header;

@@ -19,14 +19,11 @@ const CaseStudies = forwardRef<HTMLElement, CaseStudiesProps>(
         ref={ref}
         isInView={isInView}
       >
-        <TitleContainer title="Case Studies">
-          <span className={styles.subtitle}>
-            Explore Real-Life Examples of Our Proven Digital Marketing Success
-            through Our Case Studies
-          </span>
+        <TitleContainer title={data.mainTitle}>
+          <span className={styles.subtitle}>{data.subtitle}</span>
         </TitleContainer>
-        <CaseStudiesMobile data={data} />
-        <CaseStudiesDesktop data={data} />
+        <CaseStudiesMobile data={data.cards} />
+        <CaseStudiesDesktop data={data.cards} />
       </Container>
     );
   }

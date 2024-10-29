@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { memo } from 'react';
 
 import { platforms_data } from '../data';
 import styles from './Platforms.module.css';
@@ -7,7 +7,7 @@ import styles from './Platforms.module.css';
 interface PlatformsProps {
   delay?: '1' | '2' | 1 | 2;
 }
-const Platforms: React.FC<PlatformsProps> = ({ delay }) => {
+const Platforms: React.FC<PlatformsProps> = memo(({ delay }) => {
   return (
     <ul
       className={clsx(styles.platforms_list, {
@@ -24,6 +24,6 @@ const Platforms: React.FC<PlatformsProps> = ({ delay }) => {
       ))}
     </ul>
   );
-};
+});
 
 export default Platforms;

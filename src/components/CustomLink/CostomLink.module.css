@@ -63,7 +63,7 @@
 
 .link_wrapper {
   display: inline-block;
-  width: 200px;
+  width: 51px;
   border-radius: var(--b-radius);
   padding: 5px;
   background-image: linear-gradient(
@@ -84,7 +84,7 @@
   transform: scale(1.05);
 }
 
-@meidia screen and (hover: none) {
+@media screen and (hover: none) {
   .link_wrapper:active {
     background-position: 0;
     transform: scale(1.05);
@@ -107,5 +107,9 @@
 
   .left_arrow_dark.leftArrow::after {
     color: var(--color-white);
+  }
+
+  .link_wrapper {
+    width: 200px;
   }
 }
