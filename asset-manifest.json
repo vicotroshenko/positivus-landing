@@ -1,15 +1,24 @@
 {
   "files": {
-    "main.css": "/positivus-landing/static/css/main.20f4d338.css",
-    "main.js": "/positivus-landing/static/js/main.e101e5e3.js",
+    "main.css": "/positivus-landing/static/css/main.52692595.css",
+    "main.js": "/positivus-landing/static/js/main.b5839a5c.js",
     "static/js/453.ab30e9ab.chunk.js": "/positivus-landing/static/js/453.ab30e9ab.chunk.js",
+    "static/media/SpaceGrotesk-Light.ttf": "/positivus-landing/static/media/SpaceGrotesk-Light.ba15429f9efcccc2826a.ttf",
+    "static/media/SpaceGrotesk-Medium.ttf": "/positivus-landing/static/media/SpaceGrotesk-Medium.d188dfade7a12bbb16c1.ttf",
+    "static/media/SpaceGrotesk-Regular.ttf": "/positivus-landing/static/media/SpaceGrotesk-Regular.3683ead52440efaeba4d.ttf",
+    "static/media/SpaceGrotesk-SemiBold.ttf": "/positivus-landing/static/media/SpaceGrotesk-SemiBold.0c90cf115980aae34f07.ttf",
+    "static/media/SpaceGrotesk-Bold.ttf": "/positivus-landing/static/media/SpaceGrotesk-Bold.9ee2fc15497f7869312f.ttf",
+    "static/media/Logo.svg": "/positivus-landing/static/media/Logo.58b1c8e783d1e5b132db518006569910.svg",
     "index.html": "/positivus-landing/index.html",
-    "main.20f4d338.css.map": "/positivus-landing/static/css/main.20f4d338.css.map",
-    "main.e101e5e3.js.map": "/positivus-landing/static/js/main.e101e5e3.js.map",
+    "static/media/arrow.svg": "/positivus-landing/static/media/arrow.b6da33c367b31579465e.svg",
+    "static/media/cross.svg": "/positivus-landing/static/media/cross.05bf1128825301e431d4a917cfd51b74.svg",
+    "static/media/burger_menu.svg": "/positivus-landing/static/media/burger_menu.a194c6016ae8a4b4c3f32d417463ddeb.svg",
+    "main.52692595.css.map": "/positivus-landing/static/css/main.52692595.css.map",
+    "main.b5839a5c.js.map": "/positivus-landing/static/js/main.b5839a5c.js.map",
     "453.ab30e9ab.chunk.js.map": "/positivus-landing/static/js/453.ab30e9ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.20f4d338.css",
-    "static/js/main.e101e5e3.js"
+    "static/css/main.52692595.css",
+    "static/js/main.b5839a5c.js"
   ]
 }
