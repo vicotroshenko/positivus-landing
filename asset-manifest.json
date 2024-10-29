@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/positivus-landing/static/css/main.52692595.css",
-    "main.js": "/positivus-landing/static/js/main.b5839a5c.js",
+    "main.css": "/positivus-landing/static/css/main.86974538.css",
+    "main.js": "/positivus-landing/static/js/main.468a58bc.js",
     "static/js/453.ab30e9ab.chunk.js": "/positivus-landing/static/js/453.ab30e9ab.chunk.js",
     "static/media/SpaceGrotesk-Light.ttf": "/positivus-landing/static/media/SpaceGrotesk-Light.ba15429f9efcccc2826a.ttf",
     "static/media/SpaceGrotesk-Medium.ttf": "/positivus-landing/static/media/SpaceGrotesk-Medium.d188dfade7a12bbb16c1.ttf",
@@ -13,12 +13,12 @@
     "static/media/arrow.svg": "/positivus-landing/static/media/arrow.b6da33c367b31579465e.svg",
     "static/media/cross.svg": "/positivus-landing/static/media/cross.05bf1128825301e431d4a917cfd51b74.svg",
     "static/media/burger_menu.svg": "/positivus-landing/static/media/burger_menu.a194c6016ae8a4b4c3f32d417463ddeb.svg",
-    "main.52692595.css.map": "/positivus-landing/static/css/main.52692595.css.map",
-    "main.b5839a5c.js.map": "/positivus-landing/static/js/main.b5839a5c.js.map",
+    "main.86974538.css.map": "/positivus-landing/static/css/main.86974538.css.map",
+    "main.468a58bc.js.map": "/positivus-landing/static/js/main.468a58bc.js.map",
     "453.ab30e9ab.chunk.js.map": "/positivus-landing/static/js/453.ab30e9ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.52692595.css",
-    "static/js/main.b5839a5c.js"
+    "static/css/main.86974538.css",
+    "static/js/main.468a58bc.js"
   ]
 }
