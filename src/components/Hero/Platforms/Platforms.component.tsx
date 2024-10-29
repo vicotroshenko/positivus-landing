@@ -15,7 +15,7 @@ const Platforms: React.FC<PlatformsProps> = ({ delay }) => {
       })}
     >
       {platforms_data.map((platform) => (
-        <li>
+        <li key={platform.name}>
           <img
             src={platform.logo}
             alt={platform.name}

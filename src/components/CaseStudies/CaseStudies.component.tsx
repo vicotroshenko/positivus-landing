@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { anchors } from '../../constants';
 import Container from '../Container/Container.component';
 import TitleContainer from '../TitleContainer/TitleContainer.component';
 import styles from './CaseStudies.module.css';
@@ -9,7 +10,7 @@ import data from './data';
 
 const CaseStudies = () => {
   return (
-    <Container>
+    <Container anchor={anchors.CASES}>
       <TitleContainer title="Case Studies">
         <span className={styles.subtitle}>
           Explore Real-Life Examples of Our Proven Digital Marketing Success

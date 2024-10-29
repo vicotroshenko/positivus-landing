@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { anchors } from '../../constants';
 import Container from '../Container/Container.component';
 import ContactUsSVG from '../SVG/ContactUs/ContactUsSVG/ContactUsSVG.component';
 import TitleContainer from '../TitleContainer/TitleContainer.component';
@@ -8,7 +9,10 @@ import Form from './Form/Form.component';
 
 const ContactUs = () => {
   return (
-    <Container last>
+    <Container
+      last
+      anchor={anchors.CONTACT}
+    >
       <TitleContainer title="Contact Us">
         <span className={styles.subtitle}>
           Connect with Us: Let's Discuss Your Digital Marketing Needs

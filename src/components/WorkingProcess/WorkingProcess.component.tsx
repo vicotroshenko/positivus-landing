@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { anchors } from '../../constants';
 import Container from '../Container/Container.component';
 import TitleContainer from '../TitleContainer/TitleContainer.component';
 import styles from './WorkingProcess.module.css';
@@ -8,7 +9,7 @@ import data from './data';
 
 const WorkingProcess = () => {
   return (
-    <Container>
+    <Container anchor={anchors.PRICING}>
       <TitleContainer title="Our Working Process ">
         <span className={styles.subtitle}>
           Step-by-Step Guide to Achieving Your Business Goals

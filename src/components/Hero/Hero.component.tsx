@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { anchors } from '../../constants';
 import CustomButton from '../CustomButton/CustomButton.component';
 import HeroSvg from '../SVG/Hero/HeroSvg.component';
 import styles from './Hero.module.css';
@@ -7,7 +8,10 @@ import Platforms from './Platforms/Platforms.component';
 
 const Hero = () => {
   return (
-    <section className={styles.hero}>
+    <section
+      className={styles.hero}
+      id={anchors.ABOUT}
+    >
       <div className={styles.container}>
         <div className={styles.content_wrapper}>
           <h1>Navigating the digital landscape for success</h1>

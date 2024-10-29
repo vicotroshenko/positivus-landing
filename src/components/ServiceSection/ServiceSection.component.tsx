@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { anchors } from '../../constants';
 import Container from '../Container/Container.component';
 import Proposal from '../Proposal/Proposal.component';
 import TitleContainer from '../TitleContainer/TitleContainer.component';
@@ -23,7 +24,7 @@ const ServiceSection = () => {
   };
 
   return (
-    <Container>
+    <Container anchor={anchors.SERVICES}>
       <TitleContainer title="Services">
         <span className={styles.subtitle}>
           At our digital marketing agency, we offer a range of services to help
